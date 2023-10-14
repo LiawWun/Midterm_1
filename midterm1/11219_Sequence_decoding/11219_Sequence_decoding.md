@@ -2,7 +2,7 @@
 
 The sequence is composed of combinations of numbers from 1 to m, forming a sequence of length m. The elements in the sequence are all unique. In other words, all numbers from 1 to m appear **exactly once** in the sequence.
 
-We will encrypt this sequence into a new sequence {$b_1$, $b_2$, $b_3$, $b_4$,..., $b_m$}. In the encrypted sequence, '$b_m$' represents the count of numbers greater than 'm' in the original sequence that appear before 'm'.
+We will encrypt this sequence into a new sequence { $b_1$, $b_2$, $b_3$, $b_4$,..., $b_m$}. In the encrypted sequence, ' $b_m$ ' represents the count of numbers greater than 'm' in the original sequence that appear before 'm'.
 
 You will be given an <font color=#FF0000>encrypted sequence</font> of length m. Please write a program to decrypt this sequence.
 
@@ -10,11 +10,10 @@ You will be given an <font color=#FF0000>encrypted sequence</font> of length m. 
 The encrypted sequence might be impossible to decrypt. Your program should also be able to identify sequences that cannot be decrypted.
 
 
-<font color=#FF6600>
+  
+ If we apply the encryption to {2, 1, 5, 4, 3}, we will obtain the encrypted sequence {1, 0, 2, 1, 0}.
 
-If we apply the encryption to {2, 1, 5, 4, 3}, we will obtain the encrypted sequence {1, 0, 2, 1, 0}.
-
-Below is the explanation for the encrypted sequence {1, 0, 2, 1, 0}.
+ Below is the explanation for the encrypted sequence {1, 0, 2, 1, 0}.
 
  $m = 1 ,b_1 = 1$, In the original sequence, there are 1 numbers before '1' that are greater than '1'.
 
@@ -26,10 +25,9 @@ Below is the explanation for the encrypted sequence {1, 0, 2, 1, 0}.
 
  $m = 5 ,b_5 = 0$, In the original sequence, there are 0 numbers before '5' that are greater than '5'.
 
-</font>
 
 
-<font color=#00FF00>
+
 
 For those who have no idea why there are some sequences that can't be decrypted, try to consider the following question.
 
@@ -39,7 +37,8 @@ For those who have no idea why there are some sequences that can't be decrypted,
 
 3. What is the maximum possible value for each element '$b_m$' in the encrypted sequence?
 
-</font>
+
+
 
 ## Input Format
 There will be two lines of input.
