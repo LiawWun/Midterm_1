@@ -2,6 +2,10 @@
 
 We define a subarray as a contiguous portion of an array, which means it is an array that is contained within another array.
 
+For example, consider the array [1, 2, 3, 4], There are 10 non-empty subarrays. 
+
+The subarrays are [1], [2], [3], [4], [1, 2], [2, 3], [3, 4], [1, 2, 3], [2, 3, 4] and [1, 2, 3, 4].
+
 Write a program to display all the subarrays where the product of all the elements in the subarray is greater than the integer k. If there is no subarray that meets the criteria, print "No solution".
 
 When outputting the subarrays that meet the criteria, please obey to the following rules:
