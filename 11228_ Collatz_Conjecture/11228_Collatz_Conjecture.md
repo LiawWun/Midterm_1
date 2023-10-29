@@ -4,7 +4,7 @@ The Collatz conjecture(猜想), also known as the 3n+1 conjecture, is an intrigu
 1. If the current number is even, divide it by 2.
 2. If the current number is odd, multiply it by 3, and then add 1.
    
-Your task is to create a program to verify the Collatz Conjecture. Your program should accept a positive integer as input and then process it according to the rules of the Collatz Conjecture until it reaches 1. Your program should output the total number of steps required for "n" to reach 1 and the maximum value reached during the process.
+Your task is to create a program to verify the Collatz conjecture. Your program should accept a positive integer as input and then process it according to the rules of the Collatz conjecture until it reaches 1. Your program should output the total number of steps required for "n" to reach 1 and the maximum value reached during the process.
 
 Requirement:
 
