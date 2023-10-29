@@ -12,5 +12,5 @@ int main(){
   return 0;
 }
 int CollatzConjecture(int num){
-    return num % 2 == 0 ? num / 2 : 3 * num + 1;
+  return num % 2 == 0 ? num / 2 : 3 * num + 1;
 }
