@@ -3,10 +3,10 @@ int CollatzConjecture(int num);
 int main(){
   int x, max = 0, step = 0;
   scanf("%d", &x);
-  while (x != 1){
+  while (x != 1 || step == 0){
     step += 1;
-    x = CollatzConjecture(x);
     max = x > max ? x : max;
+    x = CollatzConjecture(x);
   }
   printf("%d %d", step, max);
   return 0;
