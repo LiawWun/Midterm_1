@@ -1,0 +1,1 @@
+void getMaxMin(char string_arr[][16], int size, int *min_idx, char **min, int *max_idx, char **max);
