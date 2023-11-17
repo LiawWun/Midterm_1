@@ -72,7 +72,6 @@ Max string: orange
 Max string index: 2
 Min string: apple
 Min string index: 0
-
 ```
 
 ## Sample Input 2
