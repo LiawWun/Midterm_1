@@ -7,7 +7,7 @@ int main(){
   float num_table[5];
   char operation_table[5];
   int i = 0, num_idx = 0, op_idx = 0, length = strlen(math_exp);
-  // This part deal with the number inside ()
+  // This part deal with the number inside the ()
   while (i < length){
     if (math_exp[i] == '('){
       float op1 = math_exp[i + 1] - '0';
@@ -30,19 +30,11 @@ int main(){
   }
   //Deal with "Multiply and divide first, then add and subtract"
   if (num_idx == 3){
-    if (operation_table[0] == '*' || operation_table[0] == '/'){
-      printf("%.3f\n", calculate(calculate(num_table[0], num_table[1], operation_table[0]), num_table[2], operation_table[1]));
-    }
-    else if (operation_table[1] == '*' || operation_table[1] == '/'){
-      printf("%.3f\n", calculate(num_table[0], calculate(num_table[1], num_table[2], operation_table[1]), operation_table[0]));
-    }
-    else{ 
-      printf("%.3f\n", calculate(calculate(num_table[0], num_table[1], operation_table[0]), num_table[2], operation_table[1]));
-    }
+    if (operation_table[0] == '*' || operation_table[0] == '/') printf("%.3f\n", calculate(calculate(num_table[0], num_table[1], operation_table[0]), num_table[2], operation_table[1]));
+    else if (operation_table[1] == '*' || operation_table[1] == '/') printf("%.3f\n", calculate(num_table[0], calculate(num_table[1], num_table[2], operation_table[1]), operation_table[0]));
+    else printf("%.3f\n", calculate(calculate(num_table[0], num_table[1], operation_table[0]), num_table[2], operation_table[1]));
   }
-  else{
-    printf("%.3f\n", calculate(num_table[0], num_table[1], operation_table[0]));
-  }
+  else printf("%.3f\n", calculate(num_table[0], num_table[1], operation_table[0]));
   return 0;
 }
 float calculate(float op1, float op2, char operation){
