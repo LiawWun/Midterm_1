@@ -11,15 +11,15 @@ int main(){
   if (num < 1) for (exponent = 127; num < 1; num*= 2, exponent --){}
   else for (exponent = 127; num > 2; num/=2, exponent ++){}	
   for (int i = 1, term = 128; i <= 8; i++, term /=2){
-	ans[i] = (int)(exponent / term);
-	exponent = ans[i] == 1 ? exponent - term : exponent;
+    ans[i] = (int)(exponent / term);
+    exponent = ans[i] == 1 ? exponent - term : exponent;
   }
   num = num - 1;
   // Calculate Mantissa
   for (int i = 9; i <= 31; i++){
-	num = num * 2;
-	ans[i] = num >= 1 ? 1 : 0;
-	num = ans[i] == 1 ? num - 1 : num;
+    num = num * 2;
+    ans[i] = num >= 1 ? 1 : 0;
+    num = ans[i] == 1 ? num - 1 : num;
   }
   for (int i = 0; i < 32; i++) printf( i == 31 ? "%d\n" : "%d ", ans[i]);
   return 0;
