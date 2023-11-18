@@ -1,0 +1,8 @@
+addi,x0,x0,-3
+addi,x1,x1,9
+addi,x2,x2,0
+bge,x1,x0,3
+sub,x2,x0,x1
+beq,x0,x0,2
+sub,x2,x1,x0
+end
