@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-
 struct Pokemon {
     char name[50];
     int health;
@@ -8,12 +7,10 @@ struct Pokemon {
     int attack;      
     int speed;       
 };
-
 struct Player {
     char name[50];
     struct Pokemon pokemon;
 };
-
 int main() {
   struct Player *player;
   struct Pokemon *pok;
@@ -32,7 +29,7 @@ int main() {
   struct Player *first_player, *second_player;
   first_player = player1.pokemon.speed > player2.pokemon.speed ? &player1 : &player2;
   second_player = player1.pokemon.speed > player2.pokemon.speed ? &player2 : &player1;
-  while(first_player -> pokemon.health > 0 && second_player -> pokemon.health > 0){
+  while (first_player -> pokemon.health > 0 && second_player -> pokemon.health > 0){
     printf("%s's %s attacks %s's %s\n", first_player-> name, first_player -> pokemon.name, second_player -> name, second_player -> pokemon.name);
     second_player -> pokemon.health -= first_player -> pokemon.attack;
     if (second_player -> pokemon.health <= 0){
@@ -46,7 +43,7 @@ int main() {
       printf("%s has lost its battle capability.\n", first_player->pokemon.name);
       break;
     }
-      printf("%s's health %d/%d\n", first_player->pokemon.name, first_player->pokemon.health, first_player->pokemon.max_health);
+    printf("%s's health %d/%d\n", first_player->pokemon.name, first_player->pokemon.health, first_player->pokemon.max_health);
   }
   if (first_player->pokemon.health <= 0){
     printf("%s wins!\n", second_player -> name);
